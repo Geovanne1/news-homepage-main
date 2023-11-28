@@ -1,0 +1,130 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill 33%);
+  grid-template-rows: repeat(auto-fill 33%);
+  grid-template-areas: "imagem imagem new"
+  "title container new"
+  "item-one item-two item-three";
+  gap: 25px;
+  align-items: stretch;
+}
+
+main img{
+  width: 97%;
+  align-items: end;
+  grid-area: imagem;
+
+}
+
+main .desktop {
+  display: block;
+}
+
+main .mobile {
+  display: none;
+}
+
+main .title {
+  grid-area: title;
+  font-size: 30px;
+}
+
+.container {
+  grid-area: container;
+  align-items: center;
+  justify-content: center;
+}
+
+.container button {
+  border: none;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.container button:hover {
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+
+.new {
+  background-color: hsl(240, 100%, 5%);
+  grid-area: new;
+  color: hsl(36, 100%, 99%);
+  padding: 8px;
+}
+
+.new h2 {
+  color: hsl(35, 77%, 62%);
+}
+
+.new h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.new p {
+  padding-bottom: 10px;
+  color: hsl(233, 8%, 79%);
+}
+
+.marca {
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+}
+
+.item-one {
+  grid-area: item-one;
+}
+
+.item-two {
+  grid-area: item-two;
+}
+
+.item-three {
+  grid: item-three;
+}
+
+.cards {
+  display: flex;
+}
+
+.cards img {
+  width: 30%;
+  height: 80%;
+  margin-right: 10px;
+}
+
+.cards i {
+  font-size: 35px;
+  color: hsl(236, 13%, 42%);
+  font-style: normal;
+  font-weight: bold;
+}
+
+.cards h3:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 748px) {
+
+  main {
+    grid-template-areas: "imagem"
+    "title"
+    "container"
+    "new"
+    "item-one"
+    "item-two"
+    "item-three"
+    ;
+  }
+
+  main .desktop {
+    display: none;
+  }
+  
+  main .mobile {
+    display: block;
+  }
+}
